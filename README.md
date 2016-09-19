@@ -1,7 +1,7 @@
-# Vue.js vs Polymer vs React vs Angular 2
+# Dashboard with Vue.js, Polymer, React.js and Angular.js 2
 
 [![licence mit](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](http://hemersonvianna.mit-license.org/)
-[![issues](https://img.shields.io/github/issues/side-by-side-arena/vue-polymer-react-angular.svg?style=flat-square)](https://github.com/side-by-side-arena/vue-polymer-react-angular/issues)
+[![issues](https://img.shields.io/github/issues/side-by-side-arena/dashboard-vue-polymer-react-angular.svg?style=flat-square)](https://github.com/side-by-side-arena/dashboard-vue-polymer-react-angular/issues)
 
 ## Contributing
 
@@ -13,7 +13,7 @@
 
 ## Log
 
-Check [Releases](https://github.com/side-by-side-arena/vue-polymer-react-angular/releases) for detailed changelog.
+Check [Releases](https://github.com/side-by-side-arena/dashboard-vue-polymer-react-angular/releases) for detailed changelog.
 
 ## License
 
