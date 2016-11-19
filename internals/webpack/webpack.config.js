@@ -3,22 +3,22 @@ const webpack = require('webpack');
 const validate = require('webpack-validator');
 
 const PATHS = {
-  app: path.resolve(__dirname, '../../source/assets/js'),
-  build: path.resolve(__dirname, '../../public/js/')
+  app: path.resolve(__dirname, '../../source/assets/'),
+  build: path.resolve(__dirname, '../../public/')
 };
 
 module.exports = validate({
   entry: {
-    vue: path.resolve(PATHS.app, 'vue/index.js'),
-    angular: path.resolve(PATHS.app, 'angular/index.js'),
-    react: path.resolve(PATHS.app, 'react/index.js'),
-    riot: path.resolve(PATHS.app, 'riot/index.js'),
-    polymer: path.resolve(PATHS.app, 'polymer/index.js')
+    vue:      path.join(PATHS.app, 'js', 'vue', 'index.js'),
+    angular:  path.join(PATHS.app, 'js', 'angular', 'index.js'),
+    react:    path.join(PATHS.app, 'js', 'react', 'index.js'),
+    riot:     path.join(PATHS.app, 'js', 'riot', 'index.js'),
+    polymer:  path.join(PATHS.app, 'js', 'polymer', 'index.js')
   },
   output: {
     path: PATHS.build,
-    filename: '[name].min.js',
-    publicPath: '/'
+    filename: 'js/[name].min.js',
+    publicPath: ''
   },
   stats: {
     colors: true,
@@ -29,10 +29,7 @@ module.exports = validate({
     modulesDirectories: [
       'node_modules'
     ],
-    extensions: ['', '.json', '.webpack.js', '.js', '.jsx'],
-    alias: {
-      'vue$': 'vue/dist/vue'
-    }
+    extensions: ['', '.json', '.webpack.js', '.js', '.jsx']
   },
   module: {
     preLoaders: [
@@ -63,9 +60,9 @@ module.exports = validate({
       {
         test: /\.js$/,
         include: [
-          path.resolve(__dirname, "../../source/assets/js/vue"),
-          path.resolve(__dirname, "../../source/assets/js/riot"),
-          path.resolve(__dirname, "../../source/assets/js/polymer")
+          path.resolve(PATHS.app, "js/vue"),
+          path.resolve(PATHS.app, "js/riot"),
+          path.resolve(PATHS.app, "js/polymer")
         ],
         exclude: /(node_modules)/,
         loader: 'babel-loader',
@@ -76,7 +73,7 @@ module.exports = validate({
       {
         test: /\.jsx$/,
         include: [
-          path.resolve(__dirname, "../../source/assets/js/react")
+          path.resolve(PATHS.app, "js/react")
         ],
         exclude: /(node_modules)/,
         loader: 'babel-loader?presets[]=es2015,presets[]=stage-0,presets[]=react',
@@ -84,13 +81,19 @@ module.exports = validate({
       {
         test: /\.js$/,
         include: [
-          path.resolve(__dirname, "../../source/assets/js/angular")
+          path.resolve(PATHS.app, "js/angular")
         ],
         exclude: /(node_modules)/,
         loader: 'ng-annotate!babel-loader?presets[]=es2015,presets[]=stage-0'
       },
       { test: /\.html$/, loader: 'raw' },
-      { test: /\.json$/, loaders: ['json-loader'] }
+      { test: /\.json$/, loaders: ['json-loader'] },
+      {
+        test: /\.css$/,
+        exclude: /node_modules/,
+        include: /src/,
+        loaders: ['style', 'css']
+      }
     ],
     noParse: /node_modules\/json-schema\/lib\/validate\.js/
   },
