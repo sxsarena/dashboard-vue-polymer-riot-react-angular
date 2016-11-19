@@ -7,7 +7,9 @@
     <title>Vue</title>
   </head>
   <body>
-    <div data-js="app"></div>
+    <div data-js="app">
+      <items-view :state="state" :actions="actions"></items-view>
+    </div>
     <script type="text/javascript" src="/js/vue.min.js"></script>
   </body>
 </html>

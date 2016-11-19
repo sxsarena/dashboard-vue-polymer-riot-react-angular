@@ -29,6 +29,9 @@ module.exports = validate({
     modulesDirectories: [
       'node_modules'
     ],
+    alias: {
+      'vue$': 'vue/dist/vue'
+    },
     extensions: ['', '.json', '.webpack.js', '.js', '.jsx', '.vue']
   },
   module: {
