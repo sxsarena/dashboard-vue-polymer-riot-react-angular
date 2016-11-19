@@ -9,6 +9,6 @@ config.plugins.concat([
   new DashboardPlugin(),
   new HtmlPlugin()
 ]);
-config.devtool = 'eval-source-map';
+config.devtool = 'source-map';
 
 module.exports = config;

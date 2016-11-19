@@ -29,34 +29,16 @@ module.exports = validate({
     modulesDirectories: [
       'node_modules'
     ],
-    extensions: ['', '.json', '.webpack.js', '.js', '.jsx']
+    extensions: ['', '.json', '.webpack.js', '.js', '.jsx', '.vue']
   },
   module: {
     preLoaders: [
-      {
-        test: /\.tag$/,
-        exclude: /node_modules/,
-        loader: 'riotjs-loader',
-        query: { type: 'none' }
-      },
-      {
-        test: /\/components\/.+\.js$/,
-        loader: 'polymer-loader?templateExtension=html&styleExtension=scss'
-      }
+      { test: /\.tag$/, loader: 'riotjs-loader?type=none' },
+      { test: /\/components\/.+\.js$/, loader: 'polymer-loader?templateExtension=html&styleExtension=scss' }
     ],
     loaders: [
-      {
-        test: /\.vue$/,
-        loader: 'vue'
-      },
-      {
-        test: /\.(png|jpg|gif|svg)$/,
-        loader: 'file',
-        query: {
-          limit: 10000,
-          name: '[name].[ext]?[hash]'
-        }
-      },
+      { test: /\.vue$/, loader: 'vue' },
+      { test: /\.(png|jpg|gif|svg)$/, loader: 'url-loader?limit=8192'},
       {
         test: /\.js$/,
         include: [
@@ -65,10 +47,7 @@ module.exports = validate({
           path.resolve(PATHS.app, "js/polymer")
         ],
         exclude: /(node_modules)/,
-        loader: 'babel-loader',
-        query: {
-          presets: ['es2015', 'stage-0']
-        }
+        loader: 'babel-loader?presets[]=es2015,presets[]=stage-0'
       },
       {
         test: /\.jsx$/,
@@ -88,12 +67,9 @@ module.exports = validate({
       },
       { test: /\.html$/, loader: 'raw' },
       { test: /\.json$/, loaders: ['json-loader'] },
-      {
-        test: /\.css$/,
-        exclude: /node_modules/,
-        include: /src/,
-        loaders: ['style', 'css']
-      }
+      { test: /\.css$/, loader: 'style!css'},
+      //install css-loader style-loader sass-loader node-sass --save-dev
+      { test: /\.scss$/, loader: 'style!css!sass?sourceMap'},
     ],
     noParse: /node_modules\/json-schema\/lib\/validate\.js/
   },
