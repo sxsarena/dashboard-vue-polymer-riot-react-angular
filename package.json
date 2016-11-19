@@ -1,0 +1,65 @@
+{
+  "name": "dashboard-vue-polymer-riot-react-angular",
+  "version": "1.0.0",
+  "description": "Dashboard",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dashboard -- node server.js",
+    "build": "cross-env NODE_ENV=production webpack --progress --config ./internals/webpack/webpack.prod.config",
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/side-by-side-arena/dashboard-vue-polymer-riot-react-angular.git"
+  },
+  "keywords": [
+    "dashboard",
+    "vuejs",
+    "polymer",
+    "riotjs",
+    "angular2",
+    "reactjs"
+  ],
+  "author": "Hemerson Vianna <hemerson.lourenco@gmail.com> (http://www.descco.com.br)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/side-by-side-arena/dashboard-vue-polymer-riot-react-angular/issues"
+  },
+  "homepage": "https://github.com/side-by-side-arena/dashboard-vue-polymer-riot-react-angular#readme",
+  "devDependencies": {
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.8",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "cross-env": "^3.1.3",
+    "css-loader": "^0.26.0",
+    "file-loader": "^0.9.0",
+    "json-loader": "^0.5.4",
+    "ng-annotate-loader": "^0.2.0",
+    "ngtemplate-loader": "^1.3.1",
+    "node-sass": "^3.13.0",
+    "polymer-loader": "^1.0.0",
+    "raw-loader": "^0.5.1",
+    "riotjs-loader": "^3.0.0",
+    "vue-loader": "^9.9.5",
+    "vue-style-loader": "^1.0.0",
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2",
+    "webpack-validator": "^2.2.9"
+  },
+  "dependencies": {
+    "angular-mocks": "^1.5.8",
+    "angular-ui-router": "^0.3.2",
+    "angular2": "^2.0.0-beta.17",
+    "react": "^15.4.0",
+    "react-dom": "^15.4.0",
+    "polymer": "^0.5.0",
+    "riot": "^2.6.7",
+    "vue": "^2.0.7"
+  },
+  "engines": {
+    "node": ">= 6.9.1",
+    "npm": ">= 3.10.8"
+  }
+}
