@@ -1,6 +1,6 @@
 {
   "name": "dashboard-vue-polymer-riot-react-angular",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Dashboard",
   "main": "index.js",
   "scripts": {
