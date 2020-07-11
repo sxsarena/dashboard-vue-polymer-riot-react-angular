@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/side-by-side-arena/dashboard-vue-polymer-riot-react-angular.git"
+    "url": "git+https://github.com/sxsarena/dashboard-vue-polymer-riot-react-angular.git"
   },
   "keywords": [
     "dashboard",
@@ -20,12 +20,12 @@
     "angular2",
     "reactjs"
   ],
-  "author": "Hemerson Vianna <hemerson.lourenco@gmail.com> (http://www.descco.com.br)",
+  "author": "Hemerson Vianna <hemerson.lourenco@gmail.com> (https://nerdcalistenico.com.br)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/side-by-side-arena/dashboard-vue-polymer-riot-react-angular/issues"
+    "url": "https://github.com/sxsarena/dashboard-vue-polymer-riot-react-angular/issues"
   },
-  "homepage": "https://github.com/side-by-side-arena/dashboard-vue-polymer-riot-react-angular#readme",
+  "homepage": "https://github.com/sxsarena/dashboard-vue-polymer-riot-react-angular#readme",
   "devDependencies": {
     "babel-core": "^6.18.2",
     "babel-loader": "^6.2.8",
