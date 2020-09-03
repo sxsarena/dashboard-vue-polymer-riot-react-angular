@@ -43,7 +43,7 @@
     "json-loader": "^0.5.4",
     "ng-annotate-loader": "^0.2.0",
     "ngtemplate-loader": "^1.3.1",
-    "node-sass": "^3.13.0",
+    "node-sass": "^4.14.1",
     "polymer-loader": "^1.0.0",
     "raw-loader": "^0.5.1",
     "riotjs-loader": "^3.0.0",
